@@ -14,6 +14,7 @@
 		32A291372B0D5CCE00A24C5C /* QRCodeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A291362B0D5CCE00A24C5C /* QRCodeGeneratorTests.swift */; };
 		32A291412B0D5CCE00A24C5C /* QRCodeGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A291402B0D5CCE00A24C5C /* QRCodeGeneratorUITests.swift */; };
 		32A291432B0D5CCE00A24C5C /* QRCodeGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A291422B0D5CCE00A24C5C /* QRCodeGeneratorUITestsLaunchTests.swift */; };
+		32A291502B0D5F1C00A24C5C /* InputTypeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A2914F2B0D5F1C00A24C5C /* InputTypeDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		32A2913C2B0D5CCE00A24C5C /* QRCodeGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRCodeGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A291402B0D5CCE00A24C5C /* QRCodeGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGeneratorUITests.swift; sourceTree = "<group>"; };
 		32A291422B0D5CCE00A24C5C /* QRCodeGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		32A2914F2B0D5F1C00A24C5C /* InputTypeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTypeDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				32A291272B0D5CCD00A24C5C /* ContentView.swift */,
 				32A291292B0D5CCE00A24C5C /* Assets.xcassets */,
 				32A2912B2B0D5CCE00A24C5C /* Preview Content */,
+				32A2914F2B0D5F1C00A24C5C /* InputTypeDetector.swift */,
 			);
 			path = QRCodeGenerator;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				32A291282B0D5CCD00A24C5C /* ContentView.swift in Sources */,
 				32A291262B0D5CCD00A24C5C /* QRCodeGeneratorApp.swift in Sources */,
+				32A291502B0D5F1C00A24C5C /* InputTypeDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
