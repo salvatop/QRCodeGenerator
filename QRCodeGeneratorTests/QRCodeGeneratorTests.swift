@@ -3,36 +3,60 @@ import XCTest
 
 final class QRCodeGeneratorTests: XCTestCase {
     var inputTypeDetector: InputTypeDetector!
-    
+
     override func setUpWithError() throws {
         inputTypeDetector = InputTypeDetector()
     }
-    
-    override func tearDownWithError() throws{
+
+    override func tearDownWithError() throws {
         inputTypeDetector = nil
     }
-    
-    func testNumericInputDetection() {
-        var input = "657595"
+
+    func testNumericInputDetectionSuccess() {
+        let input = "657595"
         let inputType = inputTypeDetector.detectInputType(input: input)
         XCTAssertEqual(inputType, InputType.numeric)
     }
-    
-    func testByteInputDetection() {
-        var input = "Æ"
+
+    func testNumericInputDetectionFailure() {
+        let input = "pippo"
+        let inputType = inputTypeDetector.detectInputType(input: input)
+        XCTAssertNotEqual(inputType, InputType.numeric)
+    }
+
+    func testByteInputDetectionSuccess() {
+        let input = "e´"
         let inputType = inputTypeDetector.detectInputType(input: input)
         XCTAssertEqual(inputType, InputType.byte)
     }
-    
-    func testKanjiInputDetection() {
-        var input = "ラ"
+
+    func testByteInputDetectionFailure() {
+        let input = "ラ"
+        let inputType = inputTypeDetector.detectInputType(input: input)
+        XCTAssertNotEqual(inputType, InputType.byte)
+    }
+
+    func testAlphanumericInputDetectionSuccess() {
+        let input = "pippo123"
+        let inputType = inputTypeDetector.detectInputType(input: input)
+        XCTAssertEqual(inputType, InputType.alphaNumeric)
+    }
+
+    func testAlphanumericInputDetectionFailure() {
+        let input = "@"
+        let inputType = inputTypeDetector.detectInputType(input: input)
+        XCTAssertNotEqual(inputType, InputType.alphaNumeric)
+    }
+
+    func testKanjiInputDetectionSuccess() {
+        let input = "漢字"
         let inputType = inputTypeDetector.detectInputType(input: input)
         XCTAssertEqual(inputType, InputType.kanji)
     }
-    
-    func testAlphanumericInputDetection() {
-        var input = "pippo123"
+
+    func testKanjiInputDetectionFailure() {
+        let input = "p"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, InputType.alphaNumeric)
+        XCTAssertNotEqual(inputType, InputType.kanji)
     }
 }
