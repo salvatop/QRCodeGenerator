@@ -15,7 +15,24 @@ final class QRCodeGeneratorTests: XCTestCase {
     func testNumericInputDetection() {
         var input = "657595"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        
         XCTAssertEqual(inputType, InputType.numeric)
+    }
+    
+    func testByteInputDetection() {
+        var input = "Æ"
+        let inputType = inputTypeDetector.detectInputType(input: input)
+        XCTAssertEqual(inputType, InputType.byte)
+    }
+    
+    func testKanjiInputDetection() {
+        var input = "ラ"
+        let inputType = inputTypeDetector.detectInputType(input: input)
+        XCTAssertEqual(inputType, InputType.kanji)
+    }
+    
+    func testAlphanumericInputDetection() {
+        var input = "pippo123"
+        let inputType = inputTypeDetector.detectInputType(input: input)
+        XCTAssertEqual(inputType, InputType.alphaNumeric)
     }
 }
