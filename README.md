@@ -1,5 +1,5 @@
 # QRCodeGenerator 
-[![CodeQL](https://github.com/salvatop/QRCodeGenerator/actions/workflows/codeql.yml/badge.svg)](https://github.com/salvatop/QRCodeGenerator/actions/workflows/codeql.yml) [![iOS starter workflow](https://github.com/salvatop/QRCodeGenerator/actions/workflows/ios.yml/badge.svg)](https://github.com/salvatop/QRCodeGenerator/actions/workflows/ios.yml)
+[![CodeQL](https://github.com/salvatop/QRCodeGenerator/actions/workflows/codeql.yml/badge.svg)](https://github.com/salvatop/QRCodeGenerator/actions/workflows/codeql.yml) [![iOS starter workflow](https://github.com/salvatop/QRCodeGenerator/actions/workflows/ios.yml/badge.svg)](https://github.com/salvatop/QRCodeGenerator/actions/workflows/ios.yml) [![SwiftLint](https://github.com/salvatop/QRCodeGenerator/actions/workflows/swiftlint.yml/badge.svg)](https://github.com/salvatop/QRCodeGenerator/actions/workflows/swiftlint.yml)
 
 
 
