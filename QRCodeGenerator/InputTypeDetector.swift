@@ -11,6 +11,7 @@ enum InputType {
 class InputTypeDetector {
 
     func detectInputType(input: String) -> InputType {
+        // swiftlint:disable switch_case_alignment
         switch true {
             case isNumeric(input: input): return .numeric
             case isAlphanumeric(input: input): return .alphaNumeric
@@ -18,10 +19,12 @@ class InputTypeDetector {
             case isKanji(input: input): return .kanji
             default: return .unknown
         }
+        // swiftlint:enable switch_case_alignment
     }
 
     private func isAlphanumeric(input: String) -> Bool {
-        let allowedCharacterSet = CharacterSet(charactersIn: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyz$%*+-./: ")
+        let allowedCharacterSet = CharacterSet(charactersIn:
+                                            "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyz$%*+-./: ")
         return input.unicodeScalars.allSatisfy { allowedCharacterSet.contains($0) }
     }
 
