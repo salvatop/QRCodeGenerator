@@ -1,5 +1,5 @@
 # QRCodeGenerator 
-[![CodeQL](https://github.com/salvatop/QRCodeGenerator/actions/workflows/codeql.yml/badge.svg)](https://github.com/salvatop/QRCodeGenerator/actions/workflows/codeql.yml) 
+[![CodeQL](https://github.com/salvatop/QRCodeGenerator/actions/workflows/codeql.yml/badge.svg)](https://github.com/salvatop/QRCodeGenerator/actions/workflows/codeql.yml) [![iOS starter workflow](https://github.com/salvatop/QRCodeGenerator/actions/workflows/ios.yml/badge.svg)](https://github.com/salvatop/QRCodeGenerator/actions/workflows/ios.yml)
 
 
 
