@@ -1,4 +1,4 @@
-name: Swiftlint
+name: SwiftLint
 
 on:
   push:
