@@ -12,11 +12,11 @@ class InputTypeDetector {
 
     func detectInputType(input: String) -> InputType {
         switch true {
-        case isNumeric(input: input): return .numeric
-        case isAlphanumeric(input: input): return .alphaNumeric
-        case isByte(input: input): return .byte
-        case isKanji(input: input): return .kanji
-        default: return .unknown
+            case isNumeric(input: input): return .numeric
+            case isAlphanumeric(input: input): return .alphaNumeric
+            case isByte(input: input): return .byte
+            case isKanji(input: input): return .kanji
+            default: return .unknown
         }
     }
 
