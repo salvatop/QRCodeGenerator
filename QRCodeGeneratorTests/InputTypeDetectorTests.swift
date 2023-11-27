@@ -15,48 +15,48 @@ final class InputTypeDetectorTests: XCTestCase {
     func testNumericInputDetectionSuccess() {
         let input = "657595"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, InputType.numeric)
+        XCTAssertEqual(inputType, .numeric)
     }
 
     func testNumericInputDetectionFailure() {
         let input = "pippo"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertNotEqual(inputType, InputType.numeric)
+        XCTAssertNotEqual(inputType, .numeric)
     }
 
     func testByteInputDetectionSuccess() {
         let input = "e´"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, InputType.byte)
+        XCTAssertEqual(inputType, .byte)
     }
 
     func testByteInputDetectionFailure() {
         let input = "ラ"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertNotEqual(inputType, InputType.byte)
+        XCTAssertNotEqual(inputType, .byte)
     }
 
     func testAlphanumericInputDetectionSuccess() {
         let input = "pippo123"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, InputType.alphaNumeric)
+        XCTAssertEqual(inputType, .alphaNumeric)
     }
 
     func testAlphanumericInputDetectionFailure() {
         let input = "@"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertNotEqual(inputType, InputType.alphaNumeric)
+        XCTAssertNotEqual(inputType, .alphaNumeric)
     }
 
     func testKanjiInputDetectionSuccess() {
         let input = "漢字"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, InputType.kanji)
+        XCTAssertEqual(inputType, .kanji)
     }
 
     func testKanjiInputDetectionFailure() {
         let input = "p"
         let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertNotEqual(inputType, InputType.kanji)
+        XCTAssertNotEqual(inputType, .kanji)
     }
 }
