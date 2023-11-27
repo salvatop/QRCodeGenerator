@@ -1,7 +1,7 @@
 import XCTest
 @testable import QRCodeGenerator
 
-final class QRCodeGeneratorTests: XCTestCase {
+final class InputTypeDetectorTests: XCTestCase {
     var inputTypeDetector: InputTypeDetector!
 
     override func setUpWithError() throws {

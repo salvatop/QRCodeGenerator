@@ -1,28 +1,30 @@
 import Foundation
 
-enum InputType {
-    case numeric
-    case alphaNumeric
-    case byte
-    case kanji
-    case unknown
-}
+final class InputTypeDetector {
 
-class InputTypeDetector {
+    enum InputType {
+        case numeric
+        case alphaNumeric
+        case byte
+        case kanji
+        case unknown
+    }
 
     func detectInputType(input: String) -> InputType {
         switch true {
             case isNumeric(input: input): return .numeric
-            case isAlphanumeric(input: input): return .alphaNumeric
+            case isAlphaNumeric(input: input): return .alphaNumeric
             case isByte(input: input): return .byte
             case isKanji(input: input): return .kanji
             default: return .unknown
         }
     }
 
-    private func isAlphanumeric(input: String) -> Bool {
-        let characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwyz$%*+-./: "
-        let characterSet = CharacterSet(charactersIn: characters)
+    private func isAlphaNumeric(input: String) -> Bool {
+        let aphabet = "abcdefghijklmnopqrstuvwyz"
+        let numbers = "0123456789"
+        let symbols = "$%*+-./: "
+        let characterSet = CharacterSet(charactersIn: aphabet + aphabet.uppercased() + numbers + symbols)
         return input.unicodeScalars.allSatisfy { characterSet.contains($0) }
     }
 
