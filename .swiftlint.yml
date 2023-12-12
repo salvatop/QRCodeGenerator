@@ -43,8 +43,9 @@ type_name:
   allowed_symbols: ["_"] # these are allowed in type names
 identifier_name:
   min_length: # only min_length
-    error: 4 # only error
+    error: 1 # only error
   excluded: # excluded via string array
+    - variable
     - id
     - URL
     - GlobalAPIKey
