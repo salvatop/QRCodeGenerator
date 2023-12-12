@@ -3,14 +3,17 @@ import XCTest
 
 final class QRCodeVersionTests: XCTestCase {
 
-    func testQRCodeVersion4() {
-        let errorCorrectionLevelPercentage: ErrorCorrectionLevelPercentage = .lowL
-        let version = "4"
-        let qrCodeGenerator = QRCodeGenerator()
+    func testQRCodeDatasetMaker() {
+        let datasetMaker = QRCodeDatasetMaker()
+        guard let qrCodeDataset = datasetMaker.loadJson(filename: "QRCodeDataset") else { return XCTFail("Failed to load JSON dataset") }
+        XCTAssertNotNil(qrCodeDataset.version["4"])
+    }
 
-        let qrCodeVersion4DataCapacity = qrCodeGenerator.loadQRCodeVersionTable(version: version, 
-                                                                                errorCorrection: errorCorrectionLevelPercentage)
+    func testCreateQRCodeVersion4() {
+        let qrCodeGenerator = QRCodeGenerator()
+        let qrCodeVersion4DataCapacity = qrCodeGenerator.createQRCode(version: "4", errorCorrection: .low)
         let expectedDataCapacity = QRCodeDataCapacity(numeric: 187, alphanumeric: 114, byte: 78, kanji: 48)
+
         XCTAssertEqual(qrCodeVersion4DataCapacity, expectedDataCapacity)
     }
 }
