@@ -2,61 +2,61 @@ import XCTest
 @testable import QRCodeGenerator
 
 final class QRCodeGeneratorTests: XCTestCase {
-    var inputTypeDetector: InputTypeDetector!
+    var modeDetector: ModeDetector!
 
     override func setUpWithError() throws {
-        inputTypeDetector = InputTypeDetector()
+        modeDetector = ModeDetector()
     }
 
     override func tearDownWithError() throws {
-        inputTypeDetector = nil
+        modeDetector = nil
     }
 
     func testNumericInputDetectionSuccess() {
         let input = "657595"
-        let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, .numeric)
+        let mode = modeDetector.detect(input: input)
+        XCTAssertEqual(mode, .numeric)
     }
 
     func testNumericInputDetectionFailure() {
         let input = "pippo"
-        let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertNotEqual(inputType, .numeric)
+        let mode = modeDetector.detect(input: input)
+        XCTAssertNotEqual(mode, .numeric)
     }
 
     func testByteInputDetectionSuccess() {
         let input = "e´"
-        let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, .byte)
+        let mode = modeDetector.detect(input: input)
+        XCTAssertEqual(mode, .byte)
     }
 
     func testByteInputDetectionFailure() {
         let input = "ラ"
-        let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertNotEqual(inputType, .byte)
+        let mode = modeDetector.detect(input: input)
+        XCTAssertNotEqual(mode, .byte)
     }
 
     func testAlphanumericInputDetectionSuccess() {
         let input = "pippo123"
-        let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, .alphaNumeric)
+        let mode = modeDetector.detect(input: input)
+        XCTAssertEqual(mode, .alphaNumeric)
     }
 
     func testAlphanumericInputDetectionFailure() {
         let input = "@"
-        let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertNotEqual(inputType, .alphaNumeric)
+        let mode = modeDetector.detect(input: input)
+        XCTAssertNotEqual(mode, .alphaNumeric)
     }
 
     func testKanjiInputDetectionSuccess() {
         let input = "漢字"
-        let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertEqual(inputType, .kanji)
+        let mode = modeDetector.detect(input: input)
+        XCTAssertEqual(mode, .kanji)
     }
 
     func testKanjiInputDetectionFailure() {
         let input = "p"
-        let inputType = inputTypeDetector.detectInputType(input: input)
-        XCTAssertNotEqual(inputType, .kanji)
+        let mode = modeDetector.detect(input: input)
+        XCTAssertNotEqual(mode, .kanji)
     }
 }
