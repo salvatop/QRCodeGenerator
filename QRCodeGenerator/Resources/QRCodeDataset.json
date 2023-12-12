@@ -1,0 +1,86 @@
+{
+    "qr_code_version": {
+        "M1": {
+            "error_detection_only": {
+                "numeric": 5,
+                "alphanumeric": 0,
+                "byte": 0,
+                "kanji": 0
+            }
+        },
+        "M2": {
+            "L": {
+                "numeric": 10,
+                "alphanumeric": 6,
+                "byte": 0,
+                "kanji": 0
+            },
+            "M": {
+                "numeric": 8,
+                "alphanumeric": 5,
+                "byte": 0,
+                "kanji": 0
+            }
+        },
+        "M3": {
+            "L": {
+                "numeric": 23,
+                "alphanumeric": 14,
+                "byte": 9,
+                "kanji": 6
+            },
+            "M": {
+                "numeric": 18,
+                "alphanumeric": 11,
+                "byte": 7,
+                "kanji": 4
+            }
+        },
+        "M4": {
+            "L": {
+                "numeric": 35,
+                "alphanumeric": 21,
+                "byte": 15,
+                "kanji": 9
+            },
+            "M": {
+                "numeric": 30,
+                "alphanumeric": 18,
+                "byte": 13,
+                "kanji": 8
+            },
+            "Q": {
+                "numeric": 21,
+                "alphanumeric": 13,
+                "byte": 9,
+                "kanji": 5
+            }
+        },
+        "4": {
+            "L": {
+                "numeric": 187,
+                "alphanumeric": 114,
+                "byte": 78,
+                "kanji": 48
+            },
+            "M": {
+                "numeric": 149,
+                "alphanumeric": 90,
+                "byte": 62,
+                "kanji": 38
+            },
+            "Q": {
+                "numeric": 111,
+                "alphanumeric": 67,
+                "byte": 46,
+                "kanji": 28
+            },
+            "H": {
+                "numeric": 82,
+                "alphanumeric": 50,
+                "byte": 34,
+                "kanji": 21
+            }
+        }
+    }
+}
