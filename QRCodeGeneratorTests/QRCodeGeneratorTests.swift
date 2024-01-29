@@ -37,7 +37,7 @@ final class QRCodeGeneratorTests: XCTestCase {
     }
 
     func testAlphanumericInputDetectionSuccess() {
-        let input = "pippo123"
+        let input = "PIPPO123"
         let mode = modeDetector.detect(input: input)
         XCTAssertEqual(mode, .alphaNumeric)
     }
