@@ -12,7 +12,7 @@ final class QRCodeVersionTests: XCTestCase {
     func testCreateQRCodeVersion4() {
         let qrCodeGenerator = QRCodeGenerator()
         let qrCodeVersion4DataCapacity = qrCodeGenerator.createQRCode(version: "4", errorCorrection: .low)
-        let expectedDataCapacity = QRCodeDataCapacity(numeric: 187, alphanumeric: 114, byte: 78, kanji: 48)
+        let expectedDataCapacity = QRCodeDataCapacity(codewords: 80, numeric: 187, alphanumeric: 114, byte: 78, kanji: 48)
 
         XCTAssertEqual(qrCodeVersion4DataCapacity, expectedDataCapacity)
     }

@@ -17,6 +17,7 @@ public enum ErrorCorrectionLevelSelector: String, Decodable {
 }
 
 struct QRCodeDataCapacity: Equatable, Codable {
+    let codewords: Int
     let numeric: Int
     let alphanumeric: Int
     let byte: Int

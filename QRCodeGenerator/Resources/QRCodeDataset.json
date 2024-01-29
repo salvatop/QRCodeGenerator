@@ -2,6 +2,7 @@
     "qr_code_version": {
         "M1": {
             "error_detection_only": {
+                "codewords": 3,
                 "numeric": 5,
                 "alphanumeric": 0,
                 "byte": 0,
@@ -10,12 +11,14 @@
         },
         "M2": {
             "L": {
+                "codewords": 5,
                 "numeric": 10,
                 "alphanumeric": 6,
                 "byte": 0,
                 "kanji": 0
             },
             "M": {
+                "codewords": 4,
                 "numeric": 8,
                 "alphanumeric": 5,
                 "byte": 0,
@@ -24,12 +27,14 @@
         },
         "M3": {
             "L": {
+                "codewords": 11,
                 "numeric": 23,
                 "alphanumeric": 14,
                 "byte": 9,
                 "kanji": 6
             },
             "M": {
+                "codewords": 9,
                 "numeric": 18,
                 "alphanumeric": 11,
                 "byte": 7,
@@ -38,18 +43,21 @@
         },
         "M4": {
             "L": {
+                "codewords": 16,
                 "numeric": 35,
                 "alphanumeric": 21,
                 "byte": 15,
                 "kanji": 9
             },
             "M": {
+                "codewords": 14,
                 "numeric": 30,
                 "alphanumeric": 18,
                 "byte": 13,
                 "kanji": 8
             },
             "Q": {
+                "codewords": 80,
                 "numeric": 21,
                 "alphanumeric": 13,
                 "byte": 9,
@@ -58,24 +66,28 @@
         },
         "4": {
             "L": {
+                "codewords": 80,
                 "numeric": 187,
                 "alphanumeric": 114,
                 "byte": 78,
                 "kanji": 48
             },
             "M": {
+                "codewords": 64,
                 "numeric": 149,
                 "alphanumeric": 90,
                 "byte": 62,
                 "kanji": 38
             },
             "Q": {
+                "codewords": 48,
                 "numeric": 111,
                 "alphanumeric": 67,
                 "byte": 46,
                 "kanji": 28
             },
             "H": {
+                "codewords": 36,
                 "numeric": 82,
                 "alphanumeric": 50,
                 "byte": 34,
