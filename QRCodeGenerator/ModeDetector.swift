@@ -22,33 +22,29 @@ final class ModeDetector {
 
     func detect(input: String) -> Mode {
         switch true {
-            case isNumeric(input: input): return .numeric
-            case isAlphaNumeric(input: input): return .alphaNumeric
-            case isByte(input: input): return .byte
-            case isKanji(input: input): return .kanji
+            case isNumeric(input): return .numeric
+            case isAlphaNumeric(input): return .alphaNumeric
+            case isByte(input): return .byte
+            case isKanji(input): return .kanji
             default: return .unknown
         }
     }
 
-    private func isAlphaNumeric(input: String) -> Bool {
-        let aphabet = "abcdefghijklmnopqrstuvwyz"
-        let numbers = "0123456789"
-        let symbols = "$%*+-./: "
-        let characterSet = CharacterSet(charactersIn: aphabet + aphabet.uppercased() + numbers + symbols)
-        return input.unicodeScalars.allSatisfy { characterSet.contains($0) }
+    private func isAlphaNumeric(_ input: String) -> Bool {
+        return input.unicodeScalars.allSatisfy { AlphanumericTable.values.keys.contains(String($0)) }
     }
 
-    private func isByte(input: String) -> Bool {
+    private func isByte(_ input: String) -> Bool {
         return input.data(using: .isoLatin1)
             .flatMap { String(data: $0, encoding: .isoLatin1) }
             .map { $0 == input } ?? false
     }
 
-    private func isNumeric(input: String) -> Bool {
+    private func isNumeric(_ input: String) -> Bool {
         return Int(input) != nil
     }
 
-    private func isKanji(input: String) -> Bool {
+    private func isKanji(_ input: String) -> Bool {
         return input.unicodeScalars.allSatisfy { character in
             return (0x4E00...0x9FA5 ~= character.value)
         }
