@@ -1,5 +1,3 @@
-import Foundation
-
 final class QRCodeGenerator {
 
     func createQRCode(version: String, errorCorrection: ErrorCorrectionLevelSelector) -> QRCodeDataCapacity {
