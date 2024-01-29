@@ -1,8 +1,7 @@
-//
-//  Helpers.swift
-//  QRCodeGenerator
-//
-//  Created by Salvatore Palazzo on 2024-01-27.
-//
-
 import Foundation
+
+final class Helpers {
+    func decimalToBinary(_ decimal: Int) -> String {
+        return String(decimal, radix: 2)
+    }
+}
